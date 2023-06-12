@@ -1,0 +1,242 @@
+/* Стили главного контейнера */
+.ednamb-container {
+    right: 20px;
+    left: unset;
+    bottom: 20px;
+    z-index: 1044;
+    position: fixed;
+    transition: visibility 0.3s, transform 0.3s, transform-origin 0.3s, scale 0.3s, opacity 0.3s, bottom 0.3s, top 0.3s, left 0.3s, right 0.3s;
+    opacity: 1;
+}
+
+.ednamb-container.show {
+    width: 60px;
+    height: 330px;
+}
+
+/* Стили главного контейнера в скрытом состоянии */
+.ednamb-container.ednamb-hide {
+    visibility: hidden;
+    transform: translateY(20%);
+    opacity: 0;
+}
+
+/* Стили блока верхних кнопок */
+.ednamb-top-buttons {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: max-content;
+    opacity: 1;
+    transition: visibility 0.3s, transform 0.3s, transform-origin 0.3s, scale 0.3s, opacity 0.3s, bottom 0.3s, top 0.3s, left 0.3s, right 0.3s;
+}
+
+/* Стили блока верхних кнопок в скрытом состоянии */
+.ednamb-top-buttons.ednamb-hide {
+    visibility: hidden;
+    transform: translateY(20%);
+    opacity: 0;
+}
+
+/* Стили кнопки из блока верхних кнопок при наведении */
+.ednamb-top-button:hover {
+    background-color: rgba(225, 0, 4, 0.8);
+}
+
+/* Стили блока нижних кнопок */
+.ednamb-left-buttons {
+    height: auto;
+    right: 0;
+}
+
+/* Стили блока нижних кнопок в скрытом состоянии */
+.ednamb-left-buttons.ednamb-hide {
+    visibility: hidden;
+    transform: translateX(90px);
+    opacity: 0;
+}
+
+/* Стили кнопки из блока нижних кнопок */
+.ednamb-left-button {
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    margin: 5px 0px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.ednamb-left-button:hover {
+    transform: scale(1.1);
+}
+
+.ednamb-left-button[href='#'] {
+    background-color: #00a9bf;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-size: 36px;
+    position: relative;
+}
+
+/* Стили главной кнопки */
+.ednamb-button {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-image: url('edna.svg');
+    filter: drop-shadow(4px 6px 2px rgba(0, 0, 0, 0.25));
+    transition: all 0.05s;
+    border-radius: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ff6a13;
+}
+
+/* Стили главной кнопки в активном состоянии */
+.ednamb-button.ednamb-active {
+    background-image: url('close.svg');
+    background-color: #a1aeb2;
+}
+
+/* Стили мобильной версии */
+@media (max-width: 1024px) and (orientation: portrait) {
+    /* Стили блока нижних кнопок */
+    .ednamb-left-buttons {
+        height: auto;
+    }
+
+    /* Стили блока нижних кнопок в скрытом состоянии */
+    .ednamb-left-buttons.ednamb-hide {
+        transform: translateY(30%);
+        transition-delay: 0s;
+    }
+}
+
+.edna-viber-banner {
+    background-color: #fff;
+    position: fixed;
+    bottom: 78px;
+    right: 100px;
+    display: none;
+    padding: 14px 12px 8px 12px;
+    width: 320px;
+    box-sizing: border-box;
+}
+
+.edna-viber-banner__show {
+    display: block;
+}
+
+.edna-banner__close {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.edna-banner__wrapper-head {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: -0.5px;
+    padding-top: 2px;
+    color: #13353f;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.edna-content {
+    margin-top: 16px;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edna-content__card {
+    display: flex;
+    align-items: stretch;
+    min-height: 48px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #00a9bf;
+    text-decoration: none;
+    box-shadow: 0 22px 10px -10px rgb(2 75 88 / 8%), 0 9px 7px -8px rgb(2 75 88 / 16%), 0 9px 20px rgb(2 75 88 / 13%);
+    background-color: #f6f6f6;
+}
+
+.violet_viber {
+    background-color: #765497;
+}
+
+.edna-content__card-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    min-width: 48px;
+}
+
+.edna-content__card-text {
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+    font-size: 13px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 3px;
+    box-sizing: border-box;
+    max-width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    height: 40px;
+    padding: 0 16px;
+}
+
+.edna-content__card-text:hover {
+    background-color: #e5f4f6;
+}
+
+.edna-content__card-text p.dark_grey {
+    margin: 4px 0 2px 0;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 11px;
+    letter-spacing: -0.5px;
+    color: #5c7d88;
+}
+
+.count-messages {
+    align-items: center;
+    background-color: red;
+    border-radius: 50%;
+    color: #fff;
+    display: none;
+    font-size: 13px;
+    font-weight: 600;
+    height: 20px;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    top: -4px;
+    width: 20px;
+}
